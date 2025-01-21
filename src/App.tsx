@@ -1,7 +1,7 @@
 import viteLogo from '/vite.svg'
 import './App.css'
 import { useAppDispatch, useAppSelector } from './hooks/store'
-import { increment } from './store/slices/counter/counterSlice';
+import { decrement, increment, incrementByAmount } from './store/slices/counter/counterSlice';
 
 function App() {
 
@@ -20,7 +20,17 @@ function App() {
         <button onClick={() =>{
           dispatch( increment() )
         }}>
-          count is { counter }
+          Increment By 1 { counter }
+        </button>
+        <button onClick={() =>{
+          dispatch( decrement() )
+        }}>
+          Decrement By 1 { counter }
+        </button>
+        <button onClick={() =>{
+          dispatch( incrementByAmount(2) )
+        }}>
+          Increment By 2 { counter }
         </button>
       </div>
     </>
