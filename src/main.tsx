@@ -4,13 +4,15 @@ import './index.css'
 // import App from './App.tsx'
 import { Provider } from 'react-redux'
 import { store } from './store'
-import { PokemonApp } from './PokemonApp.tsx'
+import { TodoApp } from './TodoApp'
+// import { PokemonApp } from './PokemonApp.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <Provider store={ store }>
       {/* <App /> */}
-      <PokemonApp />
+      {/* <PokemonApp /> */}
+      <TodoApp />
     </Provider>
   </StrictMode>,
 )
